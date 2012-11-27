@@ -7,6 +7,7 @@ module OmniAuth
       DEFAULT_SCOPE = 'favorites'
 
       option :name, 'rewardstyle'
+      option :provider_ignores_state, true
       option :client_options, {
         site: 'https://api.rewardstyle.com',
         authorize_url: 'https://api.rewardstyle.com/oauth/authorize',
