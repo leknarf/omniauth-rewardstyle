@@ -13,6 +13,13 @@ module OmniAuth
         token_url: 'https://api.rewardstyle.com/oauth/token',
       }
 
+      option :authorize_options, [:scope]
+      def authorize_params
+        super.tap do |params|
+          params[:scope] ||= DEFAULT_SCOPE
+        end
+      end
+
     end
   end
 end
